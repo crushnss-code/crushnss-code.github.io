@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · ClipForge</title>
+<meta name="description" content="How ClipForge accesses, uses, stores, protects, retains and deletes Google and YouTube account information.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c2352b'/%3E%3Cpath d='M12 9.5v13l11-6.5z' fill='white'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#c2352b"/><path d="M12 9.5v13l11-6.5z" fill="#fff"/></svg>
+      ClipForge
+    </a>
+    <nav>
+      <a href="privacy.html" aria-current="page">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective November 8, 2026</p>
+
+    <p>This policy explains what information the ClipForge desktop application ("ClipForge") accesses when you connect a YouTube channel, and how that information is used, stored, protected, kept and deleted. It also covers this website.</p>
+
+    <div class="note">
+      <p><strong>In short:</strong> ClipForge runs on your own Windows computer. Your YouTube sign-in and the information ClipForge reads from YouTube are stored only on that computer. Your sign-in is encrypted. ClipForge sends this information only to Google, to carry out what you ask. The developer never receives it. ClipForge has no advertising, analytics or tracking.</p>
+    </div>
+
+    <h2>1. ClipForge uses YouTube API Services</h2>
+    <p>ClipForge uses YouTube API Services (the YouTube Data API v3) to upload and schedule videos on the YouTube channels you connect. When you use ClipForge with YouTube, Google's handling of your information is covered by the <a href="http://www.google.com/policies/privacy">Google Privacy Policy</a>, and your use of YouTube is covered by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</p>
+
+    <h2>2. The permission ClipForge asks for</h2>
+    <p>When you connect a channel, Google's sign-in page asks you to grant ClipForge one permission: the YouTube scope <code>https://www.googleapis.com/auth/youtube.force-ssl</code>. Google describes it as allowing an app to see, edit and permanently delete your YouTube videos, ratings, comments and captions. ClipForge asks for this scope because it is the one YouTube permission that covers both uploading a video and changing its schedule after upload. ClipForge uses only the parts described below. It never deletes videos, and never reads or changes comments, ratings or captions.</p>
+    <p>ClipForge does not ask for your email address, contacts, YouTube Analytics or revenue data, or access to any other Google service.</p>
+
+    <h2>3. Information ClipForge accesses</h2>
+    <div class="table">
+    <table>
+      <tr><th>Information</th><th>Why ClipForge uses it</th></tr>
+      <tr><td>Google sign-in tokens: a refresh token, and short-lived access tokens</td><td>To act on the connected channel without asking you to sign in every time.</td></tr>
+      <tr><td>Channel details: channel ID, name, handle, a link to its profile picture, and the ID of its uploads list</td><td>To show which channel is connected, and to find the channel's uploads.</td></tr>
+      <tr><td>For videos ClipForge uploads: video ID, title, description, tags, category, privacy status, scheduled and actual publishing time, upload and processing status, any failure or rejection reason, the "made for kids" setting and the altered or synthetic content setting</td><td>To confirm that YouTube accepted each video with the right schedule, and to show you its status.</td></tr>
+      <tr><td>For your channel's most recent uploads (up to 50, including private and scheduled ones): the same video details</td><td>To find free posting times that don't clash with your other videos, and to avoid uploading the same video twice.</td></tr>
+    </table>
+    </div>
+    <p>ClipForge also sends information to YouTube on your behalf: the video files and thumbnails you approve, and the title, description, tags, privacy setting, audience setting and publishing time for each video.</p>
+
+    <h2>4. How ClipForge uses this information</h2>
+    <p>ClipForge uses information from Google only to provide the features you see and use in the app: connecting a channel, uploading and scheduling videos, changing videos it uploaded, and showing their status. It does not use this information for advertising, profiling or any other purpose, and it does not sell it.</p>
+    <p>The AI features in ClipForge run locally on your computer. ClipForge does not send your Google or YouTube information to any AI service.</p>
+    <p>ClipForge's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+    <h2>5. Sharing</h2>
+    <p>ClipForge sends your information only to Google and YouTube, and only to carry out the actions described above. It does not share your information with the developer, advertisers, data brokers or any other third party. There is no ClipForge server. No information about you, your channels or your videos is sent to the developer. ClipForge has no analytics or telemetry.</p>
+    <p>ClipForge does not let third parties show content or advertisements in the app.</p>
+
+    <h2>6. Where information is stored, and how it is protected</h2>
+    <ul>
+      <li><strong>On your computer only.</strong> ClipForge keeps its information in its own data folder on the computer where you run it (the <code>data\publish</code> folder inside the ClipForge folder).</li>
+      <li><strong>Refresh tokens are encrypted.</strong> Each channel's refresh token is encrypted with Windows Data Protection (DPAPI). So is the OAuth client secret that you set up for ClipForge. Only the same Windows user account on the same computer can decrypt them.</li>
+      <li><strong>Access tokens are kept in memory only.</strong> They are never written to disk, and they expire after about an hour.</li>
+      <li><strong>Other details are stored as ordinary files.</strong> Channel details, ClipForge's record of each video it uploaded, and the link YouTube provides for resuming an interrupted upload are saved as unencrypted files in the data folder. Anyone who can access your Windows account or those files can read them. The details of your channel's other recent uploads are kept in memory only, for up to 10 minutes, and are never saved to disk.</li>
+      <li><strong>Secure connections.</strong> ClipForge connects to Google over HTTPS. Signing in uses Google's OAuth 2.0 flow for desktop apps, with PKCE. Google sends the sign-in result back to ClipForge on your own computer (127.0.0.1).</li>
+      <li><strong>Local dashboard.</strong> ClipForge's dashboard is a web page served only to your own computer. If you give friends access to it through a private network link, ClipForge refuses its YouTube and publishing pages to everyone except you at that computer.</li>
+    </ul>
+    <p>No method of storage is completely secure. Keep your Windows account protected, and don't share ClipForge's data folder.</p>
+
+    <h2>7. Cookies and information stored on your device</h2>
+    <p>As described above, ClipForge stores information in files on your computer. Its dashboard also uses your browser's local storage to remember a few display preferences, such as the channel you last selected. ClipForge does not use cookies or similar technology for tracking or advertising. When the dashboard shows a channel's profile picture, your browser loads that image from Google's servers.</p>
+    <p>This website does not use cookies or analytics. The company that hosts it may record standard technical information, such as IP addresses, in its server logs.</p>
+
+    <h2>8. How long information is kept</h2>
+    <ul>
+      <li><strong>Refresh token and channel details:</strong> until you disconnect the channel in ClipForge. Connecting the same channel again replaces them.</li>
+      <li><strong>Access tokens:</strong> in memory only, for about an hour at most. They are gone when ClipForge stops.</li>
+      <li><strong>Your channel's other recent uploads:</strong> in memory only, for up to 10 minutes.</li>
+      <li><strong>ClipForge's record of each video it uploaded:</strong> this is the video ID, the details ClipForge sent, and the status YouTube last reported. While the channel is connected, ClipForge reads this status again from YouTube regularly. The record stays in ClipForge's local publishing queue, including after you disconnect the channel, until you delete it as described below.</li>
+    </ul>
+
+    <h2>9. How to delete your information or revoke access</h2>
+    <ul>
+      <li><strong>Disconnect in ClipForge.</strong> In ClipForge, open Publishing, then YouTube setup, and choose Disconnect for the channel. ClipForge then deletes that channel's refresh token and details from your computer, and asks Google to revoke ClipForge's access. If Google can't be reached at that moment, revoke access at Google as described below.</li>
+      <li><strong>Revoke access at Google.</strong> In addition to the deletion steps here, you can revoke ClipForge's access to your account at any time on the Google security settings page: <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>. After that, ClipForge can no longer access your channel.</li>
+      <li><strong>Delete everything ClipForge stored.</strong> Close ClipForge, then delete the files <code>google.json</code> and <code>queue.json</code> in its <code>data\publish</code> folder, or delete the whole ClipForge data folder. The developer has no copy of your information, so this removes it completely.</li>
+      <li><strong>Videos on YouTube.</strong> ClipForge never deletes videos from YouTube. You can change or delete your videos in YouTube Studio.</li>
+    </ul>
+
+    <h2>10. Children</h2>
+    <p>ClipForge is not directed at children, and is meant for people old enough to have their own YouTube account under YouTube's rules.</p>
+
+    <h2>11. Changes to this policy</h2>
+    <p>If this policy changes, the updated version will be posted on this page, with a new effective date at the top.</p>
+
+    <h2>12. Contact</h2>
+    <p>If you have questions or complaints about ClipForge's privacy practices, email the developer at <a href="mailto:crushnss@gmail.com">crushnss@gmail.com</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 ClipForge. Not affiliated with or endorsed by YouTube or Google.</span>
+    <span><a href="./">Home</a> · <a href="terms.html">Terms of Service</a></span>
+  </div>
+</footer>
+</body>
+</html>
